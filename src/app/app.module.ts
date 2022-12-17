@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import {
   faFacebook as fabFacebook,
@@ -20,14 +21,23 @@ import {
 import { AppComponent } from './app.component';
 import { CONFIG, ENV } from './app.config';
 
+// Shared
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { HomeAppsSliderComponent } from './shared/home-apps-slider/home-apps-slider.component';
+import { ServiceAPIListComponent } from './shared/service-api-list/service-api-list.component';
+import { AppListComponent } from './shared/app-list/app-list.component';
+import { HomeComponent } from './modules/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
+    HomeAppsSliderComponent,
+    ServiceAPIListComponent,
+    AppListComponent,
+    HomeComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -40,6 +50,7 @@ import { HeaderComponent } from './shared/header/header.component';
     LuxonModule,
     HttpClientModule,
     FontAwesomeModule,
+    CarouselModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'id-ID' },

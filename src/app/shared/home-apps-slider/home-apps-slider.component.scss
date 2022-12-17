@@ -1,0 +1,11 @@
+
+section {
+	z-index: 0;
+}
+
+::ng-deep img {
+	display: block;
+	width: 100vw;
+	height: 35vw;
+	object-fit: cover;
+}

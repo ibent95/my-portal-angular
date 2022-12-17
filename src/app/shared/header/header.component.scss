@@ -2,6 +2,7 @@
 header {
 	width: 100%;
 	background-color: #68B984;
+	z-index: 20;
 }
 
 .navbar-container {
@@ -40,6 +41,7 @@ header {
 .navbar-menu li.navbar-menu-item {
 	display: inline-block;
 	margin: 0 15px;
+	z-index: 5;
 
 	a {
 		text-decoration: none;
@@ -83,6 +85,7 @@ header {
 	transform: translateX(-50%);
 	transition: 200ms;
 	transition-delay: 200ms;
+	z-index: 20;
 
 	// the dropdown items style
 	li.navbar-list-item {
