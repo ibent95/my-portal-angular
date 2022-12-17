@@ -1,1 +1,25 @@
-<p>footer works!</p>
+<footer class="footer">
+	<div class="footer-container">
+		<div class="footer-top">
+			<h6 class="footer-title">Thanks...</h6>
+		</div>
+
+		<mat-divider></mat-divider>
+
+		<div class="footer-bottom">
+			<span class="copyright">
+				&copy; 2022, Ibent95.
+			</span>
+
+			<ul class="footer-list">
+				<li class="footer-list-item" *ngFor="let item of socialBlogLinks;">
+
+					<a [href]="item.link" target="_blank" rel="noopener noreferrer" class="footer-list-item-link">
+						<fa-icon [icon]="item.icon" [size]="item.iconSize"></fa-icon>
+					</a>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+</footer>

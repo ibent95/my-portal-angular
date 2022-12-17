@@ -4,5 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+$max-width-container: global 86.9%;
+$color-1: #FED049;
+$color-2: #CFFDE1;
+$color-3: #68B984;
+$color-4: #3D5656;
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.flex-container {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: space-between;
+}
