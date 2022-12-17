@@ -1,6 +1,6 @@
 # MyPortalAngular
 
-My portal for ibent95.my.id, written in Angular [Angular](https://angular.io) version 14.
+My portal for ibent95.my.id, written in [Angular version 14](https://angular.io).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 

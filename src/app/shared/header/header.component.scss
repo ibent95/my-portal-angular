@@ -40,32 +40,37 @@ header {
 .navbar-menu li.navbar-menu-item {
 	display: inline-block;
 	margin: 0 15px;
+
+	a {
+		text-decoration: none;
+		color: #fff;
+		padding: 5px 0;
+		position: relative;
+
+		&::after {
+			content: '';
+			background: #FED049;
+			width: 0;
+			height: 2px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transition: width 0.5s;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
+	}
+
 }
 
-.navbar-menu li.navbar-menu-item a {
-	text-decoration: none;
-	color: #fff;
-	padding: 5px 0;
-	position: relative;
+.navbar-menu li.navbar-menu-item.navbar-list a {
+	cursor: context-menu;
+	pointer-events: none;
 }
 
-.navbar-menu li.navbar-menu-item a::after {
-	content: '';
-	background: #FED049;
-	width: 0;
-	height: 2px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	transition: width 0.5s;
-}
-
-.navbar-menu li.navbar-menu-item a:hover::after {
-	width: 100%;
-}
-
-.navbar-menu li.navbar-menu-item.navbar-list ul.navbar-list-item.navbar-list {
-	//display: none;
+.navbar-menu li.navbar-menu-item.navbar-list ul.navbar-list-container {
 
 	visibility: hidden;
 	opacity: 0;
@@ -111,6 +116,11 @@ header {
 			}
 		}
 
+		a {
+			cursor: pointer;
+			pointer-events: initial;
+		}
+
 		// every dropdown after the
 		// first must open to the right
 		ul.navbar-list {
@@ -122,7 +132,7 @@ header {
 	}
 }
 
-.navbar-menu li.navbar-menu-item.navbar-list:hover > ul.navbar-list-item {
+.navbar-menu li.navbar-menu-item.navbar-list:hover > ul.navbar-list-container {
 	//display: initial;
 
 	// on hover an li (not an <a>)
