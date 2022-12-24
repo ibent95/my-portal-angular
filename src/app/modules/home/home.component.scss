@@ -1,0 +1,8 @@
+section div.my-portal-container {
+	margin-top: 60px;
+	margin-bottom: 60px;
+
+	&:nth-last-child(1) {
+		margin-bottom: 120px;
+	}
+}

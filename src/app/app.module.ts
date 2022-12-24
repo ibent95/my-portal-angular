@@ -26,9 +26,9 @@ import { CONFIG, ENV } from './app.config';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './modules/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { HomeAppsSliderComponent } from './shared/home-apps-slider/home-apps-slider.component';
-import { ServiceAPIListComponent } from './shared/service-api-list/service-api-list.component';
-import { AppListComponent } from './shared/app-list/app-list.component';
+import { HomeAppsSliderComponent } from './modules/home/home-apps-slider/home-apps-slider.component';
+import { ServiceAPIListComponent } from './modules/home/service-api-list/service-api-list.component';
+import { AppListComponent } from './modules/home/app-list/app-list.component';
 
 @NgModule({
   declarations: [
