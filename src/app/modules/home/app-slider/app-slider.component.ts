@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home-apps-slider',
-  templateUrl: './home-apps-slider.component.html',
-  styleUrls: ['./home-apps-slider.component.scss']
+  selector: 'app-app-slider',
+  templateUrl: './app-slider.component.html',
+  styleUrls: ['./app-slider.component.scss']
 })
-export class HomeAppsSliderComponent implements OnInit {
+export class AppsSliderComponent implements OnInit {
 
   isNoPause!: boolean;
   isAnimated!: boolean;
