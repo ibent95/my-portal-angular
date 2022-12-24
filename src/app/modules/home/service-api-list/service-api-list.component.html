@@ -4,7 +4,7 @@
 		Loading...
 	</ng-container>
 
-	<table mat-table [dataSource]="data" class="mat-elevation-z8" [ngStyle]="{ 'display': (isPageLoading) ? 'none' : '' }">
+	<table mat-table [dataSource]="tableDataSource" class="mat-elevation-z8" [ngStyle]="{ 'display': (isPageLoading) ? 'none' : '' }">
 		<!--- Note that these columns can be defined in any order. The actual rendered columns are set as a property on the row definition" -->
 
 		<!-- Position Column -->

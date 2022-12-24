@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTable } from '@angular/material/table';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,13 +9,15 @@ import { Router } from '@angular/router';
 })
 export class AppListComponent implements OnInit {
 
-  tableColumns!: string[];
   data!: Array<{
     uuid: string | null,
     app_name: string,
     status: string,
     link: string | null,
   }>;
+
+  tableColumns!: string[];
+  tableDataSource!: MatTableDataSource<typeof this.data[number]>;
 
   isPageLoading!: boolean;
 
@@ -29,6 +31,7 @@ export class AppListComponent implements OnInit {
     this.isPageLoading = true;
     this.tableColumns = ['app_name', 'status', 'link'];
     this.data = [];
+    this.tableDataSource = new MatTableDataSource(this.data);
 
     this.retrieveAppsData();
   }
@@ -58,6 +61,8 @@ export class AppListComponent implements OnInit {
         link: null,
       },
     ];
+
+    this.tableDataSource.data = this.data;
 
     this.isPageLoading = false;
   }

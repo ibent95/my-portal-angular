@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatTable } from '@angular/material/table';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,13 +9,15 @@ import { Router } from '@angular/router';
 })
 export class ServiceAPIListComponent implements OnInit, AfterViewInit {
 
-  tableColumns!: string[];
   data!: Array<{
     uuid: string | null,
     service_name: string,
     status: string,
     link: string | null,
   }>;
+
+  tableColumns!: string[];
+  tableDataSource!: MatTableDataSource<typeof this.data[number]>;
 
   isPageLoading!: boolean;
 
@@ -29,6 +31,7 @@ export class ServiceAPIListComponent implements OnInit, AfterViewInit {
     this.isPageLoading = true;
     this.tableColumns = ['service_name', 'status', 'link'];
     this.data = [];
+    this.tableDataSource = new MatTableDataSource(this.data);
 
     this.retrieveServicesData();
   }
@@ -70,6 +73,8 @@ export class ServiceAPIListComponent implements OnInit, AfterViewInit {
         link: null,
       },
     ];
+
+    this.tableDataSource.data = this.data;
 
     this.isPageLoading = false;
   }
