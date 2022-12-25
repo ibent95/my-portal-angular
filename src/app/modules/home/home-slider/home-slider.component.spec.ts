@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppsSliderComponent } from './app-slider.component';
+import { HomeSliderComponent } from './home-slider.component';
 
-describe('AppsSliderComponent', () => {
-  let component: AppsSliderComponent;
-  let fixture: ComponentFixture<AppsSliderComponent>;
+describe('HomeSliderComponent', () => {
+  let component: HomeSliderComponent;
+  let fixture: ComponentFixture<HomeSliderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AppsSliderComponent ]
+      declarations: [ HomeSliderComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AppsSliderComponent);
+    fixture = TestBed.createComponent(HomeSliderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

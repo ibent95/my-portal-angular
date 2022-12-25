@@ -26,7 +26,7 @@ import { MaterialModule } from './material/material.module';
 
 // Module components
 import { HomeComponent } from './modules/home/home.component';
-import { AppsSliderComponent } from './modules/home/app-slider/app-slider.component';
+import { HomeSliderComponent } from './modules/home/home-slider/home-slider.component';
 import { AppListComponent } from './modules/home/app-list/app-list.component';
 import { ServiceAPIListComponent } from './modules/home/service-api-list/service-api-list.component';
 
@@ -40,7 +40,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    AppsSliderComponent,
+    HomeSliderComponent,
     ServiceAPIListComponent,
     AppListComponent,
   ],

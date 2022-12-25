@@ -3,7 +3,7 @@ import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-service-api-list',
+  selector: 'myp-service-api-list',
   templateUrl: './service-api-list.component.html',
   styleUrls: ['./service-api-list.component.scss']
 })
