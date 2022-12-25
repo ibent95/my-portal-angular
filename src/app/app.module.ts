@@ -7,8 +7,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
 import { LuxonModule } from 'luxon-angular';
-import { MatIconModule } from '@angular/material/icon';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { MatIconModule } from '@angular/material/icon';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import {
   faFacebook as fabFacebook,
@@ -21,42 +21,36 @@ import {
 // App configs
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
 import { CONFIG, ENV } from './app.config';
 import { MaterialModule } from './material/material.module';
 
 // Module components
-import { HomeComponent } from './modules/home/home.component';
-import { HomeSliderComponent } from './modules/home/home-slider/home-slider.component';
-import { AppListComponent } from './modules/home/app-list/app-list.component';
-import { ServiceAPIListComponent } from './modules/home/service-api-list/service-api-list.component';
+import { ServicesApisComponent } from './modules/services-apis/services-apis.component';
 
 // Shared components
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    FooterComponent,
-    HomeSliderComponent,
-    ServiceAPIListComponent,
-    AppListComponent,
+    PageNotFoundComponent,
+    ServicesApisComponent,
   ],
   imports: [
     AppRoutingModule,
+    CoreModule,
+    LayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    LayoutModule,
-    MaterialModule,
-    MatIconModule,
-    LuxonModule,
     HttpClientModule,
-    FontAwesomeModule,
+    LuxonModule,
     CarouselModule,
+    MatIconModule,
+    FontAwesomeModule,
+    MaterialModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'id-ID' },
