@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
-  selector: 'myp-core',
+  selector: 'my-portal-core',
   templateUrl: './core.component.html',
   styleUrls: ['./core.component.scss']
 })

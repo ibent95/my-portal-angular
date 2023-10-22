@@ -1,5 +1,35 @@
-<section>
+<!-- this section is not in use but it`s a template
+<section class="my-portal-page my-portal-container">
 
-	<myp-page-not-found></myp-page-not-found>
+	<div class="my-portal-page-breadcrumb">Empty</div>
+
+	<h2 class="my-portal-page-title">Title is here</h2>
+
+	<div class="my-portal-page-content">
+		Content is here
+	</div>
 
 </section>
+-->
+
+<!-- This switch logic maybe changed in the future (because not good for user experience) -->
+
+<ng-container *ngIf="!isPageLoading">
+
+	<ng-container [ngSwitch]="data.service_code" *ngIf="data">
+
+		<ng-container *ngSwitchCase="'dynamicFormSymfony'">
+			<my-portal-dynamic-form-service-api-in-symfony></my-portal-dynamic-form-service-api-in-symfony>
+		</ng-container>
+
+		<ng-container *ngSwitchCase="'dynamicFormLumen'">
+			<my-portal-dynamic-form-service-api-in-lumen></my-portal-dynamic-form-service-api-in-lumen>
+		</ng-container>
+
+		<ng-container *ngSwitchDefault>
+			<my-portal-page-not-found></my-portal-page-not-found>
+		</ng-container>
+
+	</ng-container>
+
+</ng-container>

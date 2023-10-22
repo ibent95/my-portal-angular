@@ -27,15 +27,21 @@ import { MaterialModule } from './material/material.module';
 
 // Module components
 import { ServicesApisComponent } from './modules/services-apis/services-apis.component';
+import { DynamicFormServiceApiInSymfonyComponent } from './modules/services-apis/dynamic-form-service-api-in-symfony/dynamic-form-service-api-in-symfony.component';
+import { DynamicFormServiceApiInLumenComponent } from './modules/services-apis/dynamic-form-service-api-in-lumen/dynamic-form-service-api-in-lumen.component';
 
 // Shared components
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
     ServicesApisComponent,
+    BreadcrumbComponent,
+    DynamicFormServiceApiInSymfonyComponent,
+    DynamicFormServiceApiInLumenComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -3,7 +3,7 @@ import { Location } from "@angular/common";
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
-  selector: 'myp-page-not-found',
+  selector: 'my-portal-page-not-found',
   templateUrl: './page-not-found.component.html',
   styleUrls: ['./page-not-found.component.scss']
 })

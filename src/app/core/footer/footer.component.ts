@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IconName, IconPrefix, IconProp, SizeProp } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
-  selector: 'myp-footer',
+  selector: 'my-portal-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })

@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'myp-service-api-list',
+  selector: 'my-portal-service-api-list',
   templateUrl: './service-api-list.component.html',
   styleUrls: ['./service-api-list.component.scss']
 })
@@ -11,6 +12,7 @@ export class ServiceAPIListComponent implements OnInit, AfterViewInit {
 
   data!: Array<{
     uuid: string | null,
+    service_code: string,
     service_name: string,
     status: string,
     link: string | null,
@@ -24,7 +26,8 @@ export class ServiceAPIListComponent implements OnInit, AfterViewInit {
   @ViewChild(MatTable, { static: true }) table!: MatTable<any>;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private dataSvc: DataService,
   ) { }
 
   ngOnInit(): void {
@@ -44,30 +47,35 @@ export class ServiceAPIListComponent implements OnInit, AfterViewInit {
     this.data = [
       {
         uuid: null,
+        service_code: 'dynamicFormSymfony',
         service_name: 'Dynamic forms service in Symfony',
-        status: '[On Going]',
+        status: '[Done with on going updates]',
         link: '/services-apis',
       },
       {
         uuid: null,
+        service_code: 'dynamicFormLumen',
         service_name: 'Dynamic forms service in Lumen',
-        status: '[Pending]',
+        status: '[On going]',
         link: null,
       },
       {
         uuid: null,
+        service_code: 'dynamicFormSpringBoot',
         service_name: 'Dynamic forms service in Spring Boot',
-        status: '[Upcoming]',
+        status: '[Done with on going updates]',
         link: null,
       },
       {
         uuid: null,
+        service_code: 'dynamicFormFlask',
         service_name: 'Dynamic forms service in Flask',
         status: '[Upcoming]',
         link: null,
       },
       {
         uuid: null,
+        service_code: 'dynamicFormGo',
         service_name: 'Dynamic forms service in Go',
         status: '[Upcoming]',
         link: null,
@@ -80,7 +88,10 @@ export class ServiceAPIListComponent implements OnInit, AfterViewInit {
   }
 
   public onDynamicFormSvcLinkClick(data: typeof this.data[number]) {
-    if (data.link) this.router.navigate([data.link]);
+    if (data.link) {
+      this.dataSvc.setData(data);
+      this.router.navigate([data.link]);
+    }
   }
 
 }

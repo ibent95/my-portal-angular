@@ -4,7 +4,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
 
 @Component({
-  selector: 'myp-content',
+  selector: 'my-portal-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss'],
   inputs: ['routeMap'],

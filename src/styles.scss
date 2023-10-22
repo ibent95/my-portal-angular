@@ -10,7 +10,7 @@ $color-2: #CFFDE1;
 $color-3: #68B984;
 $color-4: #3D5656;
 
-html, body { height: 100%; }
+html, body { height: 100%; min-height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 table { width: 100%; }
 
@@ -60,5 +60,73 @@ table { width: 100%; }
 
 	&:hover::after {
 		width: 100%;
+	}
+}
+
+.my-portal-page {
+	min-height: 70.5vh;
+}
+
+.my-portal-page-title {
+	width: fit-content;
+	margin-top: 10px !important;
+	margin-bottom: 25px !important;
+	position: relative;
+
+	&::after {
+		content: '';
+		background: #FED049;
+		width: 0;
+		height: 3px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transition: width 0.5s;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-device-width: 280px) {
+	.my-portal-page {
+		min-height: 46vh;
+	}
+}
+
+@media only screen and (min-device-width: 320px) {
+	.my-portal-page {
+		min-height: 65.8vh;
+	}
+}
+
+@media only screen and (min-device-width: 480px) {
+	.my-portal-page {
+		min-height: 65.8vh;
+	}
+}
+
+@media only screen and (min-device-width: 600px) {
+	.my-portal-page {
+		min-height: 71.4vh;
+	}
+}
+
+@media only screen and (min-device-width: 800px) {
+	.my-portal-page {
+		min-height: 78.6vh;
+	}
+}
+
+@media only screen and (min-device-width: 1025px) {
+	.my-portal-page {
+		min-height: 70.5vh;
+	}
+}
+
+@media only screen and (min-device-width: 1281px) {
+	.my-portal-page {
+		min-height: 59.5vh;
 	}
 }
