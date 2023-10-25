@@ -33,6 +33,7 @@ import { DynamicFormServiceApiInLumenComponent } from './modules/services-apis/d
 // Shared components
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
+import { DynamicFormServiceApiInSpringbootComponent } from './modules/services-apis/dynamic-form-service-api-in-springboot/dynamic-form-service-api-in-springboot.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
     BreadcrumbComponent,
     DynamicFormServiceApiInSymfonyComponent,
     DynamicFormServiceApiInLumenComponent,
+    DynamicFormServiceApiInSpringbootComponent,
   ],
   imports: [
     AppRoutingModule,

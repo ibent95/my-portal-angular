@@ -64,7 +64,7 @@ export class ServiceAPIListComponent implements OnInit, AfterViewInit {
         service_code: 'dynamicFormSpringBoot',
         service_name: 'Dynamic forms service in Spring Boot',
         status: '[Done with on going updates]',
-        link: null,
+        link: '/services-apis',
       },
       {
         uuid: null,

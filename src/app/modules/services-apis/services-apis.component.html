@@ -26,6 +26,10 @@
 			<my-portal-dynamic-form-service-api-in-lumen></my-portal-dynamic-form-service-api-in-lumen>
 		</ng-container>
 
+		<ng-container *ngSwitchCase="'dynamicFormSpringBoot'">
+			<my-portal-dynamic-form-service-api-in-springboot></my-portal-dynamic-form-service-api-in-springboot>
+		</ng-container>
+
 		<ng-container *ngSwitchDefault>
 			<my-portal-page-not-found></my-portal-page-not-found>
 		</ng-container>
